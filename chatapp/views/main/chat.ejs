@@ -1,0 +1,32 @@
+<div id="message_area">
+	<h2>Welcome <%= username %></h2>
+
+	<h2>Chat messages</h2>
+	<div id="messagesContainer"></div>
+	
+	<div id="newMessageForm">
+	    <textarea id="message" placeholder="Enter your message here:"></textarea>
+	    <br/>
+	    <button id="postMessageButton">Add Message</button>
+	</div>
+	<span id="username"><%= username %></span>
+</div>
+
+<script src="/js/chat-model.js"></script>
+<script src="/js/chat-collections.js"></script>
+<script src="/js/chat-views.js"></script>
+<script src="/js/chat-events.js"></script>
+
+<script type="text/javascript">
+  
+  window.setInterval(function() {
+    var elem = document.getElementById('messagesContainer');
+    elem.scrollTop = elem.scrollHeight;
+  }, 500);
+
+  var messages = new MessageCollection();
+  messages.fetch();
+
+  var mView = new MessagesView({collection: messages});
+
+</script>

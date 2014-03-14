@@ -1,0 +1,21 @@
+#message{
+	width:500px;
+	height:200px;
+}
+#message_area{
+	width: 510px;
+}
+#postMessageButton{
+	float:right;
+}
+#username{
+	display: none;
+}
+#messagesContainer {
+	height: 300px;
+	position: relative;
+	overflow: scroll;
+}
+#errors{
+	color: red;
+}
