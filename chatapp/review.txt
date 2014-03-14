@@ -1,0 +1,16 @@
+About Project:
+	1) A real time chat application which pushes and pulls information using web sockets 
+	2) Helps uses to login and register users 
+
+About tutorial :
+	Over all it's good for someone who is using sails for the first time ,
+	Even there are some bugs in source code that he mentioned .
+
+Back Technologies used :
+	Node.js [Server side technoloy]
+	Sails.js [Mainly for dealing modeling part]
+	Express.js [Used for routing purpose]
+
+Frontend Technologies used :
+	Backbone [Used for talking to server and handling view changes]
+	jQuery [Used for dom events and manipulation]
