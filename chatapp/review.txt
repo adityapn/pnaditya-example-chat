@@ -12,5 +12,4 @@ Back Technologies used :
 	Express.js [Used for routing purpose]
 
 Frontend Technologies used :
-	Backbone [Used for talking to server and handling view changes]
-	jQuery [Used for dom events and manipulation]
+	Angular.js [Used for talking to server and handling view changes]
