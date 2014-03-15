@@ -2,31 +2,22 @@
 	<h2>Welcome <%= username %></h2>
 
 	<h2>Chat messages</h2>
-	<div id="messagesContainer"></div>
+	<div>
+		<div id="messagesContainer" ng-controller="MsgList">
+			<ul id="msg_list">
+				<li ng-repeat="msg in messages"><b>{{msg.username}}:</b> {{msg.message}}</li>
+			</ul>
+		</div>
+		
+		<div id="newMessageForm" ng-controller="Messages">
+		    <textarea id="message" ng-model="message" placeholder="Enter your message here:"></textarea>
+		    <br/>
+		    <button id="postMessageButton" ng-click="addMsg()">Add Message</button>
+		</div>
+		<span id="username"><%= username %></span>
 	
-	<div id="newMessageForm">
-	    <textarea id="message" placeholder="Enter your message here:"></textarea>
-	    <br/>
-	    <button id="postMessageButton">Add Message</button>
 	</div>
-	<span id="username"><%= username %></span>
-</div>
 
-<script src="/js/chat-model.js"></script>
-<script src="/js/chat-collections.js"></script>
-<script src="/js/chat-views.js"></script>
-<script src="/js/chat-events.js"></script>
 
-<script type="text/javascript">
-  
-  window.setInterval(function() {
-    var elem = document.getElementById('messagesContainer');
-    elem.scrollTop = elem.scrollHeight;
-  }, 500);
-
-  var messages = new MessageCollection();
-  messages.fetch();
-
-  var mView = new MessagesView({collection: messages});
-
-</script>
+<script src="/js/angular-code.js"></script>
+<script src="/js/socket-code.js"></script>

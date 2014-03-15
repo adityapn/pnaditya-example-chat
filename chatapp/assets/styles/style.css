@@ -5,6 +5,9 @@
 #message_area{
 	width: 510px;
 }
+li {
+list-style: none;
+}
 #postMessageButton{
 	float:right;
 }

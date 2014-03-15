@@ -61,7 +61,7 @@ module.exports = {
 
 
     chat: function (req, res) {
-      if (req.session.user) {
+      if (req.session.user) {          
           res.view({username: req.session.user.username,title:"My chat application"});
       } else {
           res.redirect('/');
